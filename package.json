@@ -1,0 +1,26 @@
+{
+  "name": "hardware-exp",
+  "version": "1.0.0",
+  "description": "I know how to automate my digital work, can I automate my physical work?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrevorDev/hardwareExperiments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrevorDev/hardwareExperiments/issues"
+  },
+  "homepage": "https://github.com/TrevorDev/hardwareExperiments#readme",
+  "dependencies": {
+    "cylon": "^1.2.0",
+    "cylon-firmata": "^0.23.0",
+    "cylon-gpio": "^0.27.0",
+    "cylon-i2c": "^0.23.0",
+    "serialport": "^2.0.5"
+  }
+}
