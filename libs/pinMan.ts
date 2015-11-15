@@ -8,7 +8,10 @@ Cylon.config({
 export default {
   openConnection: function(){
     return new Promise((res, rej)=>{
-
+      var devices = {}
+      for(var i = 0; i <= 13; i++){
+        devices[i] = { driver: 'direct-pin', pin: i }
+      }
       // Initialize the robot
       Cylon.robot({
         // Change the port to the correct port for your Arduino.
@@ -17,13 +20,11 @@ export default {
           arduino: { adaptor: 'firmata', port: 'COM3' }
         },
 
-        devices: {
-          led: { driver: 'led', pin: 8 }
-        },
+        devices: devices,
 
         work: function(my) {
-
-            res(my)
+            var pins = (p) => my[p]
+            res(pins)
 
         }
       }).start();
